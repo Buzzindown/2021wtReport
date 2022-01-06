@@ -4,6 +4,9 @@
     --blue: #57A1AF;
 }
 
+body {
+    margin: 0;
+}
 *,
 *::before,
 *::after {
@@ -12,18 +15,39 @@
 
 /* styles */
 
+@font-face {
+    font-family: myFont;
+    src: url(media/red-hat-font/RedHatDisplay-Medium.otf);
+}
+
 #main-text {
     margin: 0 auto;
     max-width: 75ch;
     display: flex;
     flex-direction: column;
     color: var(--blue);
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    font-family: myFont, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", "Verdana", "sans-serif"
 }
 
-.header-footer {
+/* gradients */
+
+#header {
     height: 10vh;
-    background-color: var(--blue);
+    background: rgb(87,161,175);
+    background: -moz-linear-gradient(0deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    background: linear-gradient(0deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af",endColorstr="#325d65",GradientType=1);
+}
+
+#footer {
+    margin-top: 10vh;
+    height: 10vh;
+    background: rgb(87,161,175);
+    background: -moz-linear-gradient(180deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    background: linear-gradient(180deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af",endColorstr="#325d65",GradientType=1);
 }
 
 header {
