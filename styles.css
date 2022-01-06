@@ -1,0 +1,85 @@
+
+/* setup tags */
+:root {
+    --blue: #57A1AF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* styles */
+
+#main-text {
+    margin: 0 auto;
+    max-width: 75ch;
+    display: flex;
+    flex-direction: column;
+    color: var(--blue);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+}
+
+.header-footer {
+    height: 10vh;
+    background-color: var(--blue);
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2em 0;
+}
+
+p,ul {
+    color: black;
+}
+
+
+
+
+/* img styles */
+
+#phenom-logo {
+    border: none;
+    max-width: 6rem;
+    max-height: 6rem;
+}
+
+.rect-img-container{
+    margin: 4em;
+}
+
+img{
+    border: 0.25em solid var(--blue);
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+
+/* media tags */
+
+@media screen and (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    #main-text{
+        margin: 0 0.5em;
+    }
+
+    header {
+        margin: 1em;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rect-img-container {
+        margin: 0.25em;
+    }
+  
+}
