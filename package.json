@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://buzzindown.github.io/2021wtReport/"
+  "homepage": "https://buzzindown.github.io/2021wtReport/",
   "scripts": {
     "deploy": "gh-pages -d build"
   },
@@ -17,7 +17,6 @@
   "bugs": {
     "url": "https://github.com/Buzzindown/2021wtReport/issues"
   },
-  "homepage": "https://github.com/Buzzindown/2021wtReport#readme",
   "devDependencies": {
     "gh-pages": "^3.2.3"
   }
