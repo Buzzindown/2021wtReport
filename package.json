@@ -5,7 +5,7 @@
   "main": "index.js",
   "homepage": "https://buzzindown.github.io/2021wtReport/",
   "scripts": {
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
