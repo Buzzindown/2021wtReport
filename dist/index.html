@@ -20,8 +20,10 @@
                 let menu = document.getElementById("menu");
                 if(window.getComputedStyle(menu).display === "none"){
                     menu.style.display = 'inline-block'
+                    menuToggle.style.border = "0.25em solid #57A1AF"
                 }else{
                     menu.style.display = 'none'
+                    menuToggle.style.border = 'none'
                 }
             }
         };
@@ -45,6 +47,7 @@
         let menuToggle = document.getElementById('menu-toggle');
         let menu = document.getElementById("menu");
         menu.style.display = ""
+        menu.style.boder = ""
         menuToggle.style.display = ""
     })
 </script>
