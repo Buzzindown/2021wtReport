@@ -12,11 +12,60 @@
   <link rel="stylesheet" href="styles.css">
 
 </head>
+<script>
+        window.addEventListener("load", () => {
+        const toggleMenu = () => {
+            let menuToggle = document.getElementById('menu-toggle');
+            if(window.getComputedStyle(menuToggle).display !== "none"){
+                let menu = document.getElementById("menu");
+                if(window.getComputedStyle(menu).display === "none"){
+                    menu.style.display = 'inline-block'
+                }else{
+                    menu.style.display = 'none'
+                }
+            }
+        };
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        let children = menu.childNodes;
+        console.log(menu)
+        console.log(children)
+        for(let i = 0; i < children.length; i++){
+            if(children[i].nodeName !== "#text"){
+            console.log(children[i])
+
+                let link = children[i].childNodes[0];
+                link.addEventListener("click", toggleMenu)
+            }
+        }
+        menuToggle.addEventListener("click", toggleMenu)
+    })
+
+    window.addEventListener("resize", () => {
+        let menuToggle = document.getElementById('menu-toggle');
+        let menu = document.getElementById("menu");
+        menu.style.display = ""
+        menuToggle.style.display = ""
+    })
+</script>
 
 <body>
-    <div id="header"></div>
+    <div id="header">
+        <img id="menu-toggle" src="media/white-48dp/2x/outline_menu_white_48dp.png" alt="menu">
+        <ul id="menu">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#goals">Goals</a></li>
+                <li><a href="#project-one">Project One</a></li>
+                <li><a href="#project-two">Project Two</a></li>
+                <li><a href="#project-three">Project Three</a></li>
+                <li><a href="#reflections">Reflections</a></li>
+                <li><a href="#summary">Summary</a></li>
+        </ul>
+    </div>
+    <div id="fake-header"></div>
+
     <div id="main-text">
-        <header>
+        <header id="intro">
             <h1>2021 Work Term Report</h1>
             <img id="phenom-logo" src="media/PhenomLogo.png" alt="phenom logo">
         </header>
@@ -63,7 +112,7 @@
         <div class="rect-img-container">
             <img src="media/notNormalSlides.jpeg" alt="not normal slide">
         </div>
-        <h2>
+        <h2 id="goals">
             &lt;Goals/&gt;
         </h2>
         <p>
@@ -141,7 +190,7 @@
              schedule because it allowed me to do more with my afternoons and evenings. 
              I'll go over the three projects I got to work on briefly down below.
         </p>
-        <h3>
+        <h3 id="project-one">
             Project One - Job Feeds Tool
         </h3>
         <p>
@@ -185,7 +234,7 @@
                 self service tool, that required some improvements like user roles and such but it was 
                 well worth it as ticket times had effectively been eliminated for feed changes.
         </p>
-        <h3>
+        <h3 id="project-two">
             Project Two - Micro Frontends
         </h3>
         <p>
@@ -229,7 +278,7 @@
             halfway through this project we had another junior frontend developer join our team named Shiva and a 
             backend developer named Charu. So at this point we were up to six people!
         </p>
-        <h3>
+        <h3 id="project-three">
             Project Three - Category Mapping
         </h3>
         <p>
@@ -283,7 +332,7 @@
         <div class="rect-img-container">
             <img src="media/image0.jpeg" alt="team canada">
         </div>
-        <h2>
+        <h2 id="reflections">
             &lt;Reflections/&gt;
         </h2>
         <p>
@@ -316,7 +365,7 @@
             I also learned a lot of technology and skills that will help me get further into the frontend side of 
             development.
         </p>
-        <h2>
+        <h2 id="summary">
             &lt;Summary/&gt;
         </h2>
         <p>
