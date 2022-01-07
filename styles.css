@@ -2,10 +2,15 @@
 /* setup tags */
 :root {
     --blue: #57A1AF;
+    --darker-blue: #3b717c;
+    --text: #4d4d4d;
+
 }
 
-body {
+body, html {
     margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -22,6 +27,7 @@ body {
 
 #main-text {
     margin: 0 auto;
+    padding: 0 1em;
     max-width: 75ch;
     display: flex;
     flex-direction: column;
@@ -29,10 +35,14 @@ body {
     font-family: myFont, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", "Verdana", "sans-serif"
 }
 
+
+
 /* gradients */
 
 #header {
-    height: 10vh;
+    position: fixed;
+    height: 15vh;
+    width: 100%;
     background: rgb(87,161,175);
     background: -moz-linear-gradient(0deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
@@ -40,9 +50,43 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af",endColorstr="#325d65",GradientType=1);
 }
 
+#menu {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    height: 100%;
+}
+#menu li{
+    list-style: none;
+    display: inline;
+    margin: 0px 1em;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    font-family: myFont, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', "Geneva", "Verdana", "sans-serif";
+}
+
+#menu li a:hover {
+    font-weight:bold;
+    cursor: pointer;
+}
+
+#header ul {
+    margin: 0;
+    padding: 0;
+}
+
+#fake-header{
+    height: 15vh;
+}
+
 #footer {
     margin-top: 10vh;
-    height: 10vh;
+    height: 15vh;
     background: rgb(87,161,175);
     background: -moz-linear-gradient(180deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
     background: -webkit-linear-gradient(180deg, rgba(87,161,175,1) 0%, rgba(50,93,101,1) 100%);
@@ -60,7 +104,20 @@ header {
 }
 
 p,ul {
-    color: black;
+    color: var(--text); 
+    font-size: 1.25em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    font-size: 2.0em;
+}
+
+h3 {
+    font-size: 1.75em;
 }
 
 
@@ -70,8 +127,8 @@ p,ul {
 
 #phenom-logo {
     border: none;
-    max-width: 6rem;
-    max-height: 6rem;
+    max-width: 8rem;
+    max-height: 8rem;
 }
 
 .rect-img-container{
@@ -85,26 +142,84 @@ img{
     display: block;
 }
 
+#menu-toggle{
+    display: none;
+}
+
 
 /* media tags */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     body {
         padding: 0;
     }
 
     #main-text{
-        margin: 0 0.5em;
+        margin: 0 1em;
     }
 
     header {
         margin: 1em;
         flex-direction: column;
         align-items: center;
+        flex-direction: column-reverse;
     }
 
     .rect-img-container {
         margin: 0.25em;
     }
   
+}
+
+@media screen and (max-width: 900px) {
+
+    #header{
+        height: 15vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+    #menu-toggle{
+        display: inline-block;
+        height: 3em;
+        width: 3em;
+        margin-right: 3em;
+        border: none;
+    }
+
+    #menu-toggle:hover{
+        border: 0.25em solid var(--blue);
+    }
+
+    #menu{
+        display: none;
+        position: fixed;
+        left: 10;
+        background-color: var(--blue);
+        top: 15vh;
+        height: auto;
+        background-color: var(--darker-blue);
+    }
+
+    #menu li {
+        display: block;
+        margin: 0;
+    }
+
+    li a {
+        display:block;
+        min-width:140px;
+        text-align: center;
+        padding: 1em 5em;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #fff;
+        text-decoration: none;
+        border-top: 2px solid rgb(255, 255, 255);
+        border-collapse: collapse;
+    }
+
+    li:hover{
+        background-color: var(--blue);
+    }
+
 }
