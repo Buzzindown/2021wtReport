@@ -3,19 +3,18 @@
 <html lang="en">
 
 <head>
+    <title>Work Term Report</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>WTR</title>
-    <meta name="description" content="2021 work term report!">
+    <meta name="description" content="My work term reprot for my eight month co-op at Phenom duing 2021.">
     <meta name="author" content="Mac">
-
     <link rel="stylesheet" href="styles.css">
-
 </head>
 <script>
+    // add our menu functionality on load
     window.addEventListener("load", () => {
         const toggleMenu = () => {
+            // if we're showing menu, make it toggleable
             let menuToggle = document.getElementById('menu-toggle');
             if (window.getComputedStyle(menuToggle).display !== "none") {
                 let menu = document.getElementById("menu");
@@ -28,15 +27,13 @@
                 }
             }
         };
+
         let menuToggle = document.getElementById('menu-toggle');
         let menu = document.getElementById("menu");
         let children = menu.childNodes;
-        console.log(menu)
-        console.log(children)
+        // make the menu options close menu on click
         for (let i = 0; i < children.length; i++) {
             if (children[i].nodeName !== "#text") {
-                console.log(children[i])
-
                 let link = children[i].childNodes[0];
                 link.addEventListener("click", toggleMenu)
             }
@@ -54,8 +51,8 @@
 </script>
 
 <body>
-    <div id="header">
-        <img id="menu-toggle" src="media/white-48dp/2x/outline_menu_white_48dp.png" alt="menu">
+    <header>
+        <img id="menu-toggle" src="media/menu-icon/2x/outline_menu_white_48dp.png" alt="menu button">
         <ul id="menu">
             <li><a href="#intro">Intro</a></li>
             <li><a href="#goals">Goals</a></li>
@@ -65,226 +62,237 @@
             <li><a href="#reflections">Reflections</a></li>
             <li><a href="#summary">Summary</a></li>
         </ul>
-    </div>
-    <div id="intro"></div>
-    <div id="fake-header"></div>
+    </header>
+    <a id="intro"></a>
+    <div id="header-space"></div>
     <div id="main-text">
-        <header>
-            <h1>2021 Work Term Report</h1>
-            <img id="phenom-logo" src="media/PhenomLogo.png" alt="phenom logo">
-        </header>
-        <p>
-            &emsp;&emsp;Dear reader, by the end of this post I hope that you're able to understand the ins and outs
-            of my work at Phenom and the neat projects I worked on, as well as all the things that I
-            learned! I'll get more into my role later, but as a brief introduction, I started my work at Phenom
-            on a small team of three people (myself included) working as a front end developer in React. I
-            received a MacBook Pro as my work laptop prior to starting and joined my team for my first day on
-            May 1st, 2021.
-        </p>
-        <h2>
-            &lt;About-Phenom/&gt;
-        </h2>
-        <p>&emsp;&emsp;Phenom or Phenom People as it's also referred to, is a SaaS startup founded in 2011 and
-            based out of Philadelphia. The company offers a unique recruiting solution that's based
-            heavily on artificial intelligence and machine learnining algorithms, which can allow 
-            companies to recruit faster than ever, while
-            sourcing the top talent available. Phenom offers various services, from fully fledged
-            recruiting sites, to smaller scale solutions to help out existing hiring
-            structures.
-            <br />
-            <br />
-            &emsp;&emsp;Phenom was founded by two brothers, with their goal being "to help a billion people find the
-            <b>right</b> job." I appreciate that they truly believe in this goal, it's not just a
-            marketing statement. Every quarterly global meeting, they place a large emphasis on finding
-            the right job, because people are more productive and happier when they're in a role that
-            fits them. Another cool fact about the company, which I was unaware of at the start of my
-            internship, is that they're considered a tech "unicorn" with a 1.4 billion dollar valuation
-            in 2021. The CEO plans to take the company public in the near future.
-            <br />
-            <br />
-            &emsp;&emsp;The last neat thing I'll add about Phenom is their desire to be "not normal" the company
-            embraces
-            that we're all unique and have strange experiences or characteristics and that those shape who
-            we are. Everyone who joins the company must do a "not normal" presentation during their
-            introduction week, usually on the weekly all hands meetings with 50-200 people on the call.
-            You basically present a few things that are unique or weird about you, this is a really neat
-            low-stress opportunity to learn about your coworkers and I think it really brings teams together.
-            <br />
-            <br />
-            &emsp;&emsp;The slide I used for my presentation is down below and my "not normal" presentation consisted of:
-            being close friends with a deer growing up, having dual citizenship, being an automotive
-            photographer and liking pineapple on my pizza!
-        </p>
-        <a id="goals"></a>
-        <div class="rect-img-container">
-            <img src="media/notNormalSlides.jpeg" alt="not normal slide">
-        </div>
-        <h2>
-            &lt;Goals/&gt;
-        </h2>
-        <p>
-            &emsp;&emsp;Let's talk about what I wanted to get out of this work term. Having had no experience
-            with React and minimal JavaScript practice prior to this internship, I didn't have super specific goals
-            about what technologies I wanted to learn and focused more on soft skills and other aspects.
-            That being said, I did learn a lot of tech, and I'll get into that in the reflections section.
-            I also had quite a few goals so I'll focus mainly on the ones that were particularly important
-            to me.
-            <br />
-            <br />
-            Goals for the first half of the work term.
-        </p>
-        <ul>
-            <li>
-                Become better at communicating ideas, specifically while coding. I wanted to
-                improve my ability to have a clear and understandable conversation about problems
-                and solutions.
-            </li>
-            <br />
-            <li>
-                Seek more in depth answers, part of working at Phenom was to be curious, and I really
-                wanted to embrace that. Getting full answers instead of just what I needed would
-                improve my understanding of that topic.
-            </li>
-            <br />
-            <li>
-                Improve my tech literacy. Part of describing problems and solutions is to use the right
-                terminology so that everyone knows what you're talking about. I found myself using
-                non-specific words like "this","that", or "thing" and that's not super useful.
-            </li>
-            <br />
-            <li>
-                Develop more creative solutions. Obviously there are best practices and ways that work better for
-                certain things, but I wanted to start thinking outside of the box more, while still offering
-                an optimal/well-thought-out solution.
-            </li>
-        </ul>
-        <p>Goals for the second half of the work term.</p>
-        <ul>
-            <li>
-                Become a more well-rounded leader. I think part of being successful in general is
-                being able to lead, and I wanted to improve my ability to take initiative and lead
-                by example.
-            </li>
-            <br />
-            <li>
-                Get better at estimating time requirements for tickets and other requests, as well
-                assessing how I can improve my completion times while still producing quality work.
-            </li>
-            <br />
-            <li>
-                Continued improvement on creative thinking and problem-solving.
-            </li>
-        </ul>
-        <p>
-            &emsp;&emsp;These goals gave me a good road map of specific areas to improve on over the course of my
-            work term. After about the first week and a half of work, one goal that I developed for
-            myself was to try to become more acquainted with CSS. During the first week, it became
-            clear to me why many front end devs truly hate the jumbled mess that CSS has become. However,
-            I realized that I wasn't going to be able to escape working with styles as a front end dev, so
-            I wanted to sharpen my skills over the term and become a CSS wizard.
-        </p>
-        <h2>
-            &lt;My-Job/&gt;
-        </h2>
-        <p>
-            &emsp;&emsp;This is the part where I get to tell you about all the fun stuff
-            that I did. Let me get into the job situation a little more before I
-            continue. For starters, almost all of Phenom's development teams are based
-            in Hyderabad, India. This meant a ten and a half hour time difference, which
-            was interesting to say the least. I started work every day at five am, took an
-        <a id="project-one"></a>
-        hour-long "lunch" at around nine and got my Tim Hortons, then went back to work
-            until roughly one pm. It was tough for the first week, but I actually loved this
-            schedule because it allowed me to do more with my afternoons and evenings.
-            I'll go over the three projects I got to work on briefly down below.
-        </p>
-        <h3>
-            Project One - Job Feeds Tool
-        </h3>
-        <p>
-            &emsp;&emsp;At the start of my term, my team consisted of me, a senior developer named
-            Harsha and my manager named Lakshmi. The team was freshly formed within the
-            two weeks before my arrival and was tasked to create an internal tool to
-            improve ticket times regarding the changing of “job feeds.” I'll be honest
-            here, I still don't entirely understand the whole picture of this. To my understanding,
-            companies would link their job postings to Phenom via XML feeds, and from
-            there Phenom would collect statistics and run algorithms to improve
-            the visibility/click/apply rate for those jobs. 
-            <br/>
-            <br/>
-            &emsp;&emsp;The issue at the time
-            was that these feeds were constantly being updated by customers. Support would have to go into a 
-            database and manually update the feeds, this
-            led to ticket times of a month or more for a simple change.
-            <br />
-            <br />
-            &emsp;&emsp;The first two weeks of the project were essentially just
-            planning and deciding what sort of tech we wanted to use. We opted to
-            use Redux for state management, Redux Sagas for middleware management
-            surrounding API calls (with Axios) as well as React Router. This was cool
-            to me because these technologies are super popular and a key part of the
-            React ecosystem.
-            <br />
-            <br />
-            &emsp;&emsp;We got some rough designs, and they called for a drag and drop
-            functionality. For that, we used React-Dnd. I was actually the guinea pig
-            for this functionality and was asked to seek out and test some options, so
-            we could choose the best one. The other main option was React-Beautiful-Dnd
-            (which is React-Dnd with super slick animations and a slightly different API),
-            but it was a bit more complex so we opted for the simpler unanimated
-            React-Dnd. During the third week, we had another member join the team. Her name
-            is Preethi, and she would become our backend developer working with Mongo and
-            Spring boot.
-            <br />
-            <br />
-            &emsp;&emsp;I'm trying to keep this short as I really could go on about all
-            the neat stuff we did and problems we ran into over the course of the project,
-            but I think I'll stop there. I would love to share the final designs as it ended
-            up looking fantastic, but those are confidential. Eventually the project went on to our internal
-            <a id="project-two"></a>
-            customer support team who used it and loved it. Then it was flipped over to customers
-            as a self-service tool, that change required some improvements like user roles and such, but it was
-            well worth it as ticket times had effectively been eliminated for feed changes.
-        </p>
-        <h3>
-            Project Two - Micro Front Ends
-        </h3>
-        <p>
-            &emsp;&emsp;This was a crazy cool project to get to work on as micro front ends as a
-            concept is neat, and being able to implement and develop an actual project surrounding
-            the idea is awesome. As a quick catch up for the reader, micro front ends are based on the idea
-            of microservices. The idea of micro front ends is to split up features logically so
-            that they can be managed by independent teams. The teams develop their feature
-            end-to-end from database to the user interface, they're also responsible for
-            deployment. This means that you can have multiple projects on one page, each one
-            could be made with a different stack. Hopefully, you can appreciate how appealing and
-            potentially powerful this idea is. I've included a helpful diagram below to clarify the idea. 
-         </p>
-         <div class="rect-img-container">
-            <img src="media/mfrontends.png" alt="microfrontends diagram">
-        </div>
-         <p>
-            &emsp;&emsp;Anyhow, the gist of the project is that Phenom has all of its tools in
-            this one place, where customers or internal support can access tools to change stuff
-            regarding products and settings. Our goal was to make a copy of this place but convert
-            it so that everything was running as a bunch of micro front ends, rather than links to
-            multiple monolith front ends. This would significantly simplify the development of products over time. 
-            <br/>
-            <br/>
-            &emsp;&emsp;During this time, our senior developer became busier
-            trying to navigate creating and managing a DevOps pipeline for the first project.
-            So I was the one who got to experiment with micro front ends before we started any
-            actual development. For about a week I got to mess around with the tool we used,
-            Single-Spa, which is a JavaScript router for front end microservices. I read a bunch
-            of documentation and eventually got an Angular app, and two React apps to run on the
-            same web page. By being the one to experiment with it, I gained a ton of in depth
-            knowledge on how the routing worked and a bunch of other niche information about Single-Spa. I've Included
-            an image that I drew up during a meeting that I used to help explain and reiterate
-            some ideas about how the project was going to work.
-        </p>
-        <div class="rect-img-container">
-            <img src="media/designo1o1.jpeg" alt="design page">
-        </div>
+        <section>
+
+            <div id="title">
+                <h1>2021 Work Term Report</h1>
+                <picture>
+                    <img id="phenom-logo" src="media/PhenomLogo.png" alt="Phenom logo">
+                </picture>
+            </div>
+            <p>
+                &emsp;&emsp;Dear reader, by the end of this post I hope that you're able to understand the ins and outs
+                of my work at Phenom and the neat projects I worked on, as well as all the things that I
+                learned! I'll get more into my role later, but as a brief introduction, I started my work at Phenom
+                on a small team of three people (myself included) working as a front end developer in React. I
+                received a MacBook Pro as my work laptop prior to starting and joined my team for my first day on
+                May 1st, 2021.
+            </p>
+            <h2>
+                &lt;About-Phenom/&gt;
+            </h2>
+            <p>&emsp;&emsp;Phenom or Phenom People as it's also referred to, is a SaaS startup founded in 2011 and
+                based out of Philadelphia. The company offers a unique recruiting solution that's based
+                heavily on artificial intelligence and machine learnining algorithms, which can allow
+                companies to recruit faster than ever, while
+                sourcing the top talent available. Phenom offers various services, from fully fledged
+                recruiting sites, to smaller scale solutions to help out existing hiring
+                structures.
+                <br />
+                <br />
+                &emsp;&emsp;Phenom was founded by two brothers, with their goal being "to help a billion people find the
+                <b>right</b> job." I appreciate that they truly believe in this goal, it's not just a
+                marketing statement. Every quarterly global meeting, they place a large emphasis on finding
+                the right job, because people are more productive and happier when they're in a role that
+                fits them. Another cool fact about the company, which I was unaware of at the start of my
+                internship, is that they're considered a tech "unicorn" with a 1.4 billion dollar valuation
+                in 2021. The CEO plans to take the company public in the near future.
+                <br />
+                <br />
+                &emsp;&emsp;The last neat thing I'll add about Phenom is their desire to be "not normal" the company
+                embraces
+                that we're all unique and have strange experiences or characteristics and that those shape who
+                we are. Everyone who joins the company must do a "not normal" presentation during their
+                introduction week, usually on the weekly all hands meetings with 50-200 people on the call.
+                You basically present a few things that are unique or weird about you, this is a really neat
+                low-stress opportunity to learn about your coworkers and I think it really brings teams together.
+                <br />
+                <br />
+                &emsp;&emsp;The slide I used for my presentation is down below and my "not normal" presentation
+                consisted
+                of:
+                being close friends with a deer growing up, having dual citizenship, being an automotive
+                photographer and liking pineapple on my pizza!
+            </p>
+            <a id="goals"></a>
+            <picture class="rect-img-container">
+                <img srcset="media/notNormalSmall.jpeg 700w," src="media/notNormalLarge.jpeg" alt="not normal slide">
+            </picture>
+        </section>
+        <section>
+            <h2>
+                &lt;Goals/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;Let's talk about what I wanted to get out of this work term. Having had no experience
+                with React and minimal JavaScript practice prior to this internship, I didn't have super specific goals
+                about what technologies I wanted to learn and focused more on soft skills and other aspects.
+                That being said, I did learn a lot of tech, and I'll get into that in the reflections section.
+                I also had quite a few goals so I'll focus mainly on the ones that were particularly important
+                to me.
+                <br />
+                <br />
+                Goals for the first half of the work term.
+            </p>
+            <ul>
+                <li>
+                    Become better at communicating ideas, specifically while coding. I wanted to
+                    improve my ability to have a clear and understandable conversation about problems
+                    and solutions.
+                </li>
+                <br />
+                <li>
+                    Seek more in depth answers, part of working at Phenom was to be curious, and I really
+                    wanted to embrace that. Getting full answers instead of just what I needed would
+                    improve my understanding of that topic.
+                </li>
+                <br />
+                <li>
+                    Improve my tech literacy. Part of describing problems and solutions is to use the right
+                    terminology so that everyone knows what you're talking about. I found myself using
+                    non-specific words like "this","that", or "thing" and that's not super useful.
+                </li>
+                <br />
+                <li>
+                    Develop more creative solutions. Obviously there are best practices and ways that work better for
+                    certain things, but I wanted to start thinking outside of the box more, while still offering
+                    an optimal/well-thought-out solution.
+                </li>
+            </ul>
+            <p>Goals for the second half of the work term.</p>
+            <ul>
+                <li>
+                    Become a more well-rounded leader. I think part of being successful in general is
+                    being able to lead, and I wanted to improve my ability to take initiative and lead
+                    by example.
+                </li>
+                <br />
+                <li>
+                    Get better at estimating time requirements for tickets and other requests, as well
+                    assessing how I can improve my completion times while still producing quality work.
+                </li>
+                <br />
+                <li>
+                    Continued improvement on creative thinking and problem-solving.
+                </li>
+            </ul>
+            <p>
+                &emsp;&emsp;These goals gave me a good road map of specific areas to improve on over the course of my
+                work term. After about the first week and a half of work, one goal that I developed for
+                myself was to try to become more acquainted with CSS. During the first week, it became
+                clear to me why many front end devs truly hate the jumbled mess that CSS has become. However,
+                I realized that I wasn't going to be able to escape working with styles as a front end dev, so
+                I wanted to sharpen my skills over the term and become a CSS wizard.
+            </p>
+        </section>
+        <section>
+            <h2>
+                &lt;My-Job/&gt;
+            </h2>
+            <p>
+                &emsp;&emsp;This is the part where I get to tell you about all the fun stuff
+                that I did. Let me get into the job situation a little more before I
+                continue. For starters, almost all of Phenom's development teams are based
+                in Hyderabad, India. This meant a ten and a half hour time difference, which
+                was interesting to say the least. I started work every day at five am, took an
+                <a id="project-one"></a>
+                hour-long "lunch" at around nine and got my Tim Hortons, then went back to work
+                until roughly one pm. It was tough for the first week, but I actually loved this
+                schedule because it allowed me to do more with my afternoons and evenings.
+                I'll go over the three projects I got to work on briefly down below.
+            </p>
+            <h3>
+                Project One - Job Feeds Tool
+            </h3>
+            <p>
+                &emsp;&emsp;At the start of my term, my team consisted of me, a senior developer named
+                Harsha and my manager named Lakshmi. The team was freshly formed within the
+                two weeks before my arrival and was tasked to create an internal tool to
+                improve ticket times regarding the changing of “job feeds.” I'll be honest
+                here, I still don't entirely understand the whole picture of this. To my understanding,
+                companies would link their job postings to Phenom via XML feeds, and from
+                there Phenom would collect statistics and run algorithms to improve
+                the visibility/click/apply rate for those jobs.
+                <br />
+                <br />
+                &emsp;&emsp;The issue at the time
+                was that these feeds were constantly being updated by customers. Support would have to go into a
+                database and manually update the feeds, this
+                led to ticket times of a month or more for a simple change.
+                <br />
+                <br />
+                &emsp;&emsp;The first two weeks of the project were essentially just
+                planning and deciding what sort of tech we wanted to use. We opted to
+                use Redux for state management, Redux Sagas for middleware management
+                surrounding API calls (with Axios) as well as React Router. This was cool
+                to me because these technologies are super popular and a key part of the
+                React ecosystem.
+                <br />
+                <br />
+                &emsp;&emsp;We got some rough designs, and they called for a drag and drop
+                functionality. For that, we used React-Dnd. I was actually the guinea pig
+                for this functionality and was asked to seek out and test some options, so
+                we could choose the best one. The other main option was React-Beautiful-Dnd
+                (which is React-Dnd with super slick animations and a slightly different API),
+                but it was a bit more complex so we opted for the simpler unanimated
+                React-Dnd. During the third week, we had another member join the team. Her name
+                is Preethi, and she would become our backend developer working with Mongo and
+                Spring boot.
+                <br />
+                <br />
+                &emsp;&emsp;I'm trying to keep this short as I really could go on about all
+                the neat stuff we did and problems we ran into over the course of the project,
+                but I think I'll stop there. I would love to share the final designs as it ended
+                up looking fantastic, but those are confidential. Eventually the project went on to our internal
+                <a id="project-two"></a>
+                customer support team who used it and loved it. Then it was flipped over to customers
+                as a self-service tool, that change required some improvements like user roles and such, but it was
+                well worth it as ticket times had effectively been eliminated for feed changes.
+            </p>
+            <h3>
+                Project Two - Micro Front Ends
+            </h3>
+            <p>
+                &emsp;&emsp;This was a crazy cool project to get to work on as micro front ends as a
+                concept is neat, and being able to implement and develop an actual project surrounding
+                the idea is awesome. As a quick catch up for the reader, micro front ends are based on the idea
+                of microservices. The idea of micro front ends is to split up features logically so
+                that they can be managed by independent teams. The teams develop their feature
+                end-to-end from database to the user interface, they're also responsible for
+                deployment. This means that you can have multiple projects on one page, each one
+                could be made with a different stack. Hopefully, you can appreciate how appealing and
+                potentially powerful this idea is. I've included a helpful diagram below to clarify the idea.
+            </p>
+            <picture class="rect-img-container">
+                <img srcset="media/microFeSmall.jpeg 700w," src="media/microFeLarge.jpeg" alt="microfrontends diagram">
+            </picture>
+            <p>
+                &emsp;&emsp;Anyhow, the gist of the project is that Phenom has all of its tools in
+                this one place, where customers or internal support can access tools to change stuff
+                regarding products and settings. Our goal was to make a copy of this place but convert
+                it so that everything was running as a bunch of micro front ends, rather than links to
+                multiple monolith front ends. This would significantly simplify the development of products over time.
+                <br />
+                <br />
+                &emsp;&emsp;During this time, our senior developer became busier
+                trying to navigate creating and managing a DevOps pipeline for the first project.
+                So I was the one who got to experiment with micro front ends before we started any
+                actual development. For about a week I got to mess around with the tool we used,
+                Single-Spa, which is a JavaScript router for front end microservices. I read a bunch
+                of documentation and eventually got an Angular app, and two React apps to run on the
+                same web page. By being the one to experiment with it, I gained a ton of in depth
+                knowledge on how the routing worked and a bunch of other niche information about Single-Spa. I've
+                Included
+                an image that I drew up during a meeting that I used to help explain and reiterate
+                some ideas about how the project was going to work.
+            </p>
+            <picture class="rect-img-container">
+                <img srcset="media/designSmall.jpeg 700w," src="media/designLarge.jpeg" alt="design page">
+            </picture>
             <p>
                 &emsp;&emsp;To also keep this one short, DevOps for this project was a bit rough as we had to coordinate
                 lots of stuff with other teams. Unfortunately, our team didn't have a dedicated DevOps engineer
@@ -292,9 +300,11 @@
                 a noteworthy job. Eventually we got to the point where we could test our tool out by hosting our first
                 project on it. From there, over the course of the rest of my work term we added other team's
                 tools on as micro front ends. Overall I think this was my favourite project, because the technologies
-        <a id="project-three"></a>
+                <a id="project-three"></a>
                 behind it were super neat, and I felt like I really understood everything that was going on. Also,
-                halfway through this project we had another junior front end developer join our team named Shiva as well as a
+                halfway through this project we had another junior front end developer join our team named Shiva as well
+                as
+                a
                 backend developer named Charu. So at this point we were up to six people!
             </p>
             <h3>
@@ -303,7 +313,7 @@
             <p>
                 &emsp;&emsp;This project was similar to the first project in the sense that the goal was to create a
                 tool to
-                minimize or entirely eliminate ticket times for a specific problem. 
+                minimize or entirely eliminate ticket times for a specific problem.
                 Phenom maintains internal job categories that it uses to organize the jobs coming from customers'
                 career sites. So for one Phenom job category, there may be 10 jobs under it from the customer's site.
                 The way that these are “mapped” influences a lot of things in the Phenom ecosystem, and the mapping is
@@ -311,7 +321,8 @@
                 were very slow, leading to super long ticket times.
                 <br />
                 <br />
-                &emsp;&emsp;This project started about a month before the end of my work term, and I was asked to develop
+                &emsp;&emsp;This project started about a month before the end of my work term, and I was asked to
+                develop
                 a minimum
                 viable product, essentially a rough but functional tool. The goal was to create solid foundation code,
                 not focus a lot on the user interface, and make something that would be easy for my team to take over
@@ -329,10 +340,13 @@
                 <br />
                 &emsp;&emsp;During the daily stand-ups I would update the team and give a little demo of where I was at,
                 and if I ran
-                into any issues or had questions this was also the time to share those. After about two and a half weeks,
+                into any issues or had questions this was also the time to share those. After about two and a half
+                weeks,
                 I had created a rough looking, but functional tool. Over that time span I ran into issues surrounding
-                documentation for API calls, styling, and a few changes in the UI which were all resolved in short order.
-                Now that I had created the project, Shiva joined me to bring the UI up to spec, and during that last week
+                documentation for API calls, styling, and a few changes in the UI which were all resolved in short
+                order.
+                Now that I had created the project, Shiva joined me to bring the UI up to spec, and during that last
+                week
                 we pushed out a good-looking and fully functional project.
                 <br />
                 <br />
@@ -355,18 +369,22 @@
                 the Canadians at Phenom.
             </p>
             <a id="reflections"></a>
-            <div class="rect-img-container">
-                <img src="media/image0.jpeg" alt="team canada">
-            </div>
+            <picture class="rect-img-container">
+                <img srcset="media/teamSmall.jpeg 700w," src="media/teamLarge.jpeg" alt="team Canada">
+            </picture>
+        </section>
+        <section>
             <h2>
                 &lt;Reflections/&gt;
             </h2>
             <p>
-                &emsp;&emsp;Now that you've read about all the cool things I got to work on, let's 
+                &emsp;&emsp;Now that you've read about all the cool things I got to work on, let's
                 look at how I did regarding my goals. To start, I think I improved a lot on my technical lingo and
-                being able to communicate ideas and solutions. During daily stand-ups I had to get better at articulating
+                being able to communicate ideas and solutions. During daily stand-ups I had to get better at
+                articulating
                 my ideas and problems using the correct terminology. This greatly improved my communication abilities.
-                I think that reading a lot of documentation really attributed to my success with this, eventually I would
+                I think that reading a lot of documentation really attributed to my success with this, eventually I
+                would
                 read the same word so many times that it was engraved in my memory and became natural to use.
                 <br />
                 <br />
@@ -384,12 +402,13 @@
                 long way. Starting solo on it meant that I had to take the initiative and suggest changes and
                 technologies
                 and really take control of it.
-                <br/>
-                <br/>
+                <br />
+                <br />
                 &emsp;&emsp; There were some times where I was stressed,
                 and lost, but I found that taking a step back actually the best thing I could do. On occasion,
                 I would get locked into trying to solve a problem, while completely missing the obvious solution. I've
-                learned that it's quite okay and sometimes valuable to take a few minutes or a few hours to reset and refocus. 
+                learned that it's quite okay and sometimes valuable to take a few minutes or a few hours to reset and
+                refocus.
                 <br />
                 <br />
                 &emsp;&emsp;I think being a front end dev allowed me to flex my creative muscles a lot. It's
@@ -398,23 +417,33 @@
                 with a bunch of solutions, sift them down to the best, and then choose from there. The flexibility of
                 that
                 was awesome, and I enjoyed being able to come up with multiple valid solutions.
-                React especially has a lot of room design wise to create superb and well optimized/well-designed solutions due 
+                React especially has a lot of room design wise to create superb and well optimized/well-designed
+                solutions
+                due
                 to the huge ecosystem and incredible amount of documentation.
                 <br />
                 <br />
-                &emsp;&emsp;As for becoming a CSS wizard, I don't think I'm quite where I wanted to be, although I have learned
-                a lot and am much more comfortable working with styles than I used to be. I took this report as an opportunity 
-                to learn some more and have done all the HTML/CSS from scratch with a little JavaScript to help 
-                the menu on mobile. I learned that simplicity is beauty, code and design wise. So I've tried to create a simple
-                but good-looking, and responsive design. This is something I definitely wouldn't have felt comfortable doing eight months ago. 
-                <br/>
-                <br/>
+                &emsp;&emsp;As for becoming a CSS wizard, I don't think I'm quite where I wanted to be, although I have
+                learned
+                a lot and am much more comfortable working with styles than I used to be. I took this report as an
+                opportunity
+                to learn some more and have done all the HTML/CSS from scratch with a little JavaScript to help
+                the menu on mobile. I learned that simplicity is beauty, code and design wise. So I've tried to create a
+                simple
+                but good-looking, and responsive design. This is something I definitely wouldn't have felt comfortable
+                doing
+                eight months ago.
+                <br />
+                <br />
                 &emsp;&emsp;Overall, I would say this work term had a steep learning curve but was super rewarding. I
-                put a lot of effort into making good decisions and writing quality code, and was rewarded with more responsibility.
+                put a lot of effort into making good decisions and writing quality code, and was rewarded with more
+                responsibility.
                 I also learned a lot of technology and skills that will help me get further into the front end side of
                 development.
             </p>
-                <a id="summary"></a>
+        </section>
+        <section>
+            <a id="summary"></a>
             <h2>
                 &lt;Summary/&gt;
             </h2>
@@ -427,8 +456,9 @@
                 a
                 great work term!
             </p>
-        </div>
-        <div id="footer"></div>
+        </section>
+    </div>
+    <footer></footer>
 </body>
 
 </html>
