@@ -38,9 +38,10 @@ html {
 
 
 
-/* gradients */
+/* gradients, very similar just in opposite directions */
 
-#header {
+header {
+    margin: 0;
     position: fixed;
     height: 12vh;
     width: 100%;
@@ -48,6 +49,16 @@ html {
     background: -moz-linear-gradient(0deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
     background: -webkit-linear-gradient(0deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
     background: linear-gradient(0deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af", endColorstr="#325d65", GradientType=1);
+}
+
+footer {
+    margin-top: 10vh;
+    height: 12vh;
+    background: rgb(87, 161, 175);
+    background: -moz-linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
+    background: linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af", endColorstr="#325d65", GradientType=1);
 }
 
@@ -77,26 +88,16 @@ html {
     cursor: pointer;
 }
 
-#header ul {
+header ul {
     margin: 0;
     padding: 0;
 }
 
-#fake-header {
+#header-space {
     height: 12vh;
 }
 
-#footer {
-    margin-top: 10vh;
-    height: 12vh;
-    background: rgb(87, 161, 175);
-    background: -moz-linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
-    background: -webkit-linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
-    background: linear-gradient(180deg, rgba(87, 161, 175, 1) 0%, rgba(50, 93, 101, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#57a1af", endColorstr="#325d65", GradientType=1);
-}
-
-header {
+#title {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -104,6 +105,8 @@ header {
     align-items: center;
     margin: 2em 0.75em;
 }
+
+/* font sizing */
 
 p,
 ul {
@@ -136,6 +139,9 @@ h3 {
 
 .rect-img-container {
     margin: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img {
@@ -153,6 +159,7 @@ img {
 /* media tags */
 
 @media screen and (max-width: 700px) {
+
     body {
         padding: 0;
     }
@@ -161,7 +168,7 @@ img {
         margin: 0 1em;
     }
 
-    header {
+    #title {
         margin: 1em;
         flex-direction: column;
         align-items: center;
@@ -174,20 +181,22 @@ img {
 
 }
 
+/* media where our drop down menu activates*/
+
 @media screen and (max-width: 900px) {
 
-    #header {
+    header {
         height: 10vh;
         display: flex;
         align-items: center;
         justify-content: flex-end;
     }
-
-    #fake-header {
+    /* holds space for our fixed menu */
+    #header-space {
         height: 10vh;
     }
 
-    #footer {
+    footer {
         height: 10vh;
     }
 
@@ -197,6 +206,10 @@ img {
         width: 3em;
         margin-right: 3em;
         border: none;
+    }
+
+    #menu-toggle:hover {
+        cursor: pointer;
     }
 
     #menu {
@@ -219,7 +232,6 @@ img {
         min-width: 140px;
         text-align: center;
         padding: 1em 5em;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         color: #fff;
         text-decoration: none;
         border-top: 2px solid rgb(255, 255, 255);
