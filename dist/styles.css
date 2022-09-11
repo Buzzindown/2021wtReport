@@ -72,6 +72,7 @@ footer {
 }
 
 #menu li {
+    width:5em;
     list-style: none;
     display: inline;
     margin: 0px 1em;
@@ -225,9 +226,11 @@ img {
         top: 10vh;
         height: auto;
         background-color: var(--darker-blue);
+        width:60%;
     }
 
     #menu li {
+        width:auto;
         display: block;
         margin: 0;
     }
@@ -236,7 +239,7 @@ img {
         display: block;
         min-width: 140px;
         text-align: center;
-        padding: 1em 5em;
+        padding: 1em 0;
         color: #fff;
         text-decoration: none;
         border-top: 2px solid rgb(255, 255, 255);
